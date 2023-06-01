@@ -34,10 +34,10 @@
 			</div>
 		</header>
 
-		<section class="estadisticas estadisticas__contenedor">
-			<img class="estadisticas__imagen" src="build/images/screen-mockups.svg" alt="Estadisticas" />
+		<section class="hero hero__contenedor">
+			<img class="hero__imagen" src="build/images/screen-mockups.svg" alt="Imagen Hero" />
 
-			<div class="estadisticas__grid">
+			<div class="hero__grid">
 				<div class="estadistica">
 					<div class="estadistica__icono">
 						<img src="build/images/icon-communities.svg" alt="Icono" />
@@ -60,56 +60,73 @@
 			</div>
 		</section>
 
-		<section class="together">
-			<div class="together__grid together__contenedor">
-				<img class="together__imagen" src="build/images/illustration-grow-together.svg" alt="together" />
-
+		<main class="main">
+			<section class="together">
+				<div class="together__wave"></div>
 				<div class="together__contenido">
-					<h2 class="together__heading">Grow Together</h2>
-					<p class="together__texto">
-						Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful conversations
-						you miss out on with a feedback form.
-					</p>
+					<div class="together__grid together__contenedor">
+						<div class="together__imagen">
+							<img class="together__img" src="build/images/illustration-grow-together.svg" alt="together" />
+						</div>
+
+						<div class="together__textos">
+							<h2 class="together__heading">Grow Together</h2>
+							<p class="together__descripcion">
+								Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful
+								conversations you miss out on with a feedback form.
+							</p>
+						</div>
+					</div>
 				</div>
-			</div>
-		</section>
+				<div class="together__wave"></div>
+			</section>
 
-		<section class="conversations">
-			<div class="conversations__grid conversations__contenedor">
-				<img class="conversations__imagen" src="build/images/illustration-flowing-conversation.svg" alt="conversations" />
+			<section class="conversations">
+				<div class="conversations__grid conversations__contenedor">
+					<div class="conversations__imagen">
+						<img class="conversations__img" src="build/images/illustration-flowing-conversation.svg" alt="conversations" />
+					</div>
 
-				<div class="conversations__contenido">
-					<h2 class="conversations__heading">Flowing Conversations</h2>
-					<p class="conversations__texto">
-						You wouldn't paginate a conversation in real life, so why do it online? Our threads have just-in-time loading for a more natural
-						flow.
-					</p>
+					<div class="conversations__textos">
+						<h2 class="conversations__heading">Flowing Conversations</h2>
+						<p class="conversations__descripcion">
+							You wouldn't paginate a conversation in real life, so why do it online? Our threads have just-in-time loading for a more
+							natural flow.
+						</p>
+					</div>
 				</div>
-			</div>
-		</section>
+			</section>
 
-		<section class="users">
-			<div class="users__grid users__contenedor">
-				<img class="users__imagen" src="build/images/illustration-your-users.svg" alt="users" />
-
+			<section class="users">
+				<div class="users__wave"></div>
 				<div class="users__contenido">
-					<h2 class="users__heading">Your Users</h2>
-					<p class="users__texto">
-						It takes no time at all to integrate Huddle with your app's authentication solution. This means, once signed in to your app,
-						your users can start chatting immediately.
-					</p>
-				</div>
-			</div>
-		</section>
+					<div class="users__grid users__contenedor">
+						<div class="users__imagen">
+							<img class="users__img" src="build/images/illustration-your-users.svg" alt="users" />
+						</div>
 
-		<section class="community">
-			<h2 class="community__heading">Ready To Build Your Community?</h2>
-			<a href="#" class="community__boton">Get Started For Free</a>
-		</section>
+						<div class="users__textos">
+							<h2 class="users__heading">Your Users</h2>
+							<p class="users__descripcion">
+								It takes no time at all to integrate Huddle with your app's authentication solution. This means, once signed in to your app,
+								your users can start chatting immediately.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="users__wave"></div>
+			</section>
+
+			<section class="community">
+				<h2 class="community__heading">Ready To Build Your Community?</h2>
+				<a href="#" class="community__boton">Get Started For Free</a>
+			</section>
+		</main>
 
 		<footer class="footer">
-			<div class="footer__contenedor">
-				<div class="footer__grid">
+			<div class="footer__wave"></div>
+			<div class="footer__contenido">
+				<div class="footer__grid footer__contenedor">
 					<div class="footer__widget">
 						<p class="footer__heading">Newsletter</p>
 
@@ -132,16 +149,21 @@
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacinia vestibulum a, ultrices quis sem.
 						</p>
 
-						<p class="footer__telefono"><i class="fas fa-phone-volume"></i> Phone: +1-543-123-4567</p>
-						<p class="footer__correo"><i class="fas fa-envelope"></i> example@huddle.com</p>
+						<div class="footer__contacto">
+							<img class="footer__icono" src="build/images/icon-phone.svg" alt="Phone" />
+							<p class="footer__telefono">Phone: +1-543-123-4567</p>
+						</div>
+
+						<div class="footer__contacto">
+							<img class="footer__icono" src="build/images/icon-email.svg" alt="Phone" />
+							<p class="footer__correo">example@huddle.com</p>
+						</div>
 					</div>
 				</div>
 
-				<div class="sociales">
+				<div class="sociales sociales__contenedor">
 					<i class="fab fa-facebook-square sociales__icono"></i>
-
 					<i class="fab fa-instagram sociales__icono"></i>
-
 					<i class="fab fa-twitter-square sociales__icono"></i>
 				</div>
 			</div>

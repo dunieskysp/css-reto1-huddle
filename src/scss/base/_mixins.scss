@@ -29,8 +29,8 @@
 	padding: 1rem 4rem;
 	color: $textColor;
 	margin-top: 2rem;
-	font-size: 2rem;
 	display: inline-block;
+	font-size: 1.5rem;
 	font-weight: 700;
 	border: none;
 	transition-property: background-color;
@@ -39,6 +39,8 @@
 
 	@include tablet {
 		width: auto;
+		font-size: 2rem;
+		padding: 2rem 5rem;
 	}
 	&:hover {
 		background-color: lighten($bgColor, 10%);
@@ -50,4 +52,23 @@
 	display: grid;
 	gap: $espaciado;
 	grid-template-columns: repeat($columnas, 1fr);
+}
+
+@mixin wave($url, $height) {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: $height;
+	background-image: url($url);
+	background-size: 100% $height;
+}
+
+@mixin waveTop($url, $height) {
+	@include wave($url, $height);
+	top: 0;
+}
+
+@mixin waveBottom($url, $height) {
+	@include wave($url, $height);
+	bottom: 0;
 }

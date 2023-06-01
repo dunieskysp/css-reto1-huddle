@@ -1,0 +1,169 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.together {
+	position: relative;
+	padding: 11rem 0 5rem 0;
+
+	@include m.tablet {
+		padding: 16rem 0 13rem 0;
+	}
+
+	&__wave {
+		&:first-child {
+			@include m.waveTop("../images/bg-section-top-mobile-1.svg", 11rem);
+		}
+
+		&:last-child {
+			@include m.waveBottom("../images/bg-section-bottom-mobile-1.svg", 5rem);
+		}
+
+		@include m.tablet {
+			&:first-child {
+				@include m.waveTop("../images/bg-section-top-desktop-1.svg", 16rem);
+			}
+
+			&:last-child {
+				@include m.waveBottom("../images/bg-section-bottom-desktop-1.svg", 13rem);
+			}
+		}
+	}
+
+	&__contenido {
+		background-color: v.$blanco;
+		padding: 5rem 0;
+	}
+
+	&__grid {
+		display: flex;
+		flex-direction: column;
+		gap: 10rem;
+
+		@include m.tablet {
+			@include m.grid(2, 15rem);
+			align-items: center;
+			grid-auto-flow: column;
+		}
+	}
+
+	&__imagen {
+		@include m.tablet {
+			grid-column: 2/3;
+		}
+	}
+
+	&__textos {
+		text-align: center;
+
+		@include m.tablet {
+			text-align: left;
+		}
+	}
+
+	&__descripcion {
+		line-height: 1.6;
+	}
+}
+
+.conversations {
+	padding: 10rem 0;
+
+	&__grid {
+		display: flex;
+		flex-direction: column;
+		gap: 10rem;
+
+		@include m.tablet {
+			@include m.grid(2, 15rem);
+			align-items: center;
+		}
+	}
+
+	&__textos {
+		text-align: center;
+
+		@include m.tablet {
+			text-align: left;
+		}
+	}
+
+	&__descripcion {
+		line-height: 1.6;
+	}
+}
+
+.users {
+	position: relative;
+	padding: 10rem 0;
+
+	@include m.tablet {
+		padding: 15rem 0 13rem 0;
+	}
+
+	&__wave {
+		&:first-child {
+			@include m.waveTop("../images/bg-section-top-mobile-2.svg", 10rem);
+		}
+
+		&:last-child {
+			@include m.waveBottom("../images/bg-section-bottom-mobile-2.svg", 10rem);
+		}
+
+		@include m.tablet {
+			&:first-child {
+				@include m.waveTop("../images/bg-section-top-desktop-2.svg", 15rem);
+			}
+
+			&:last-child {
+				@include m.waveBottom("../images/bg-section-bottom-desktop-2.svg", 13rem);
+			}
+		}
+	}
+
+	&__contenido {
+		background-color: v.$blanco;
+		padding: 5rem 0;
+	}
+
+	&__grid {
+		display: flex;
+		flex-direction: column;
+		gap: 10rem;
+
+		@include m.tablet {
+			@include m.grid(2, 15rem);
+			align-items: center;
+			grid-auto-flow: column;
+		}
+	}
+
+	&__imagen {
+		@include m.tablet {
+			grid-column: 2/3;
+		}
+	}
+
+	&__textos {
+		text-align: center;
+
+		@include m.tablet {
+			text-align: left;
+		}
+	}
+
+	&__descripcion {
+		line-height: 1.6;
+	}
+}
+
+.community {
+	padding: 15rem 0;
+	text-align: center;
+
+	&__boton {
+		@include m.boton(v.$primario, v.$blanco);
+		border-radius: 5rem;
+		margin-top: 4rem;
+		box-shadow: 0px 2px 5px 1px rgb(0 0 0 / 25%);
+	}
+}
