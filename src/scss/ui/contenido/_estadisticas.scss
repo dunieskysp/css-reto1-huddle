@@ -1,0 +1,38 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.estadisticas {
+	padding: 5rem 0;
+
+	&__imagen {
+		margin: 0 auto 10rem auto;
+		width: 90%;
+	}
+
+	&__grid {
+		// @include m.grid(2, 4rem);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 10rem;
+
+		@include m.tablet {
+			flex-direction: row;
+			justify-content: space-around;
+		}
+	}
+}
+
+.estadistica {
+	&__numero {
+		font-size: 10rem;
+		font-weight: 600;
+		margin: -3rem 0;
+	}
+
+	&__info {
+		color: v.$gris;
+		font-size: 2rem;
+		margin: 0;
+	}
+}

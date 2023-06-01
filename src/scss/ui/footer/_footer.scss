@@ -1,0 +1,113 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.footer {
+	margin-top: 15rem;
+	padding: 8rem 0;
+	background-color: v.$negro;
+	color: v.$blanco;
+	position: relative;
+
+	&::before {
+		content: "";
+		display: block;
+		width: 100%;
+		height: 5rem;
+		background-image: url("../images/bg-footer-top-mobile.svg");
+		background-size: 100%;
+		background-repeat: no-repeat;
+		position: absolute;
+		top: -5rem;
+		left: 0;
+
+		@include m.tablet {
+			background-image: url("../images/bg-footer-top-desktop.svg");
+			height: 15rem;
+			top: -15rem;
+		}
+	}
+
+	&__grid {
+		@include m.grid(1, 10rem);
+
+		@include m.tablet {
+			@include m.grid(2, 20rem);
+			grid-auto-flow: column;
+		}
+	}
+
+	&__widget {
+		&:first-child {
+			@include m.tablet {
+				grid-column: 2/3;
+			}
+		}
+	}
+
+	&__heading {
+		font-size: 3rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		margin: 0;
+	}
+
+	&__texto {
+		@include m.tablet {
+			max-width: 60%;
+		}
+	}
+}
+
+.formulario {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+
+	@include m.tablet {
+		flex-direction: row;
+		align-items: center;
+		gap: 3rem;
+	}
+
+	&__input {
+		padding: 1.1rem 1rem;
+		width: 100%;
+		border-radius: 0.5rem;
+		border: 0;
+		transition: border 0.3s ease;
+
+		&:hover {
+			border: 1px solid v.$secundario;
+		}
+
+		// &:focus-visible {
+		// 	outline: 1px solid v.$secundario;
+		// }
+	}
+
+	&__submit {
+		@include m.boton(v.$primario, v.$blanco);
+		margin-top: 1rem;
+		border-radius: 0.5rem;
+		max-width: 20rem;
+
+		@include m.tablet {
+			margin-top: 0;
+		}
+	}
+}
+
+.sociales {
+	margin-top: 4rem;
+	display: flex;
+	gap: 2rem;
+
+	&__icono {
+		font-size: 3.5rem;
+
+		&:hover {
+			cursor: pointer;
+			color: lighten(v.$negro, 50%);
+		}
+	}
+}

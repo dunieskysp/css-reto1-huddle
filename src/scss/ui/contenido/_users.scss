@@ -1,0 +1,75 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.users {
+	background-color: v.$blanco;
+	padding: 5rem 0;
+	margin-top: 15rem;
+	position: relative;
+
+	&::before {
+		content: "";
+		display: block;
+		width: 100%;
+		height: 10.3rem;
+		background-image: url("../images/bg-section-top-mobile-2.svg");
+		background-size: 100%;
+		background-repeat: no-repeat;
+		position: absolute;
+		top: -10.3rem;
+		left: 0;
+
+		@include m.tablet {
+			background-image: url("../images/bg-section-top-desktop-2.svg");
+			height: 14.6rem;
+			top: -14.6rem;
+		}
+	}
+
+	&::after {
+		content: "";
+		display: block;
+		width: 100%;
+		height: 11.2rem;
+		background-image: url("../images/bg-section-bottom-mobile-2.svg");
+		background-size: 100%;
+		background-repeat: no-repeat;
+		position: absolute;
+		bottom: -11.2rem;
+		left: 0;
+
+		@include m.tablet {
+			background-image: url("../images/bg-section-bottom-desktop-2.svg");
+			height: 13.9rem;
+			bottom: -13.9rem;
+		}
+	}
+
+	&__grid {
+		@include m.grid(1, 5rem);
+
+		@include m.tablet {
+			@include m.grid(2, 15rem);
+			align-items: center;
+			grid-auto-flow: column;
+		}
+	}
+
+	&__imagen {
+		@include m.tablet {
+			grid-column: 2/3;
+		}
+	}
+
+	&__contenido {
+		text-align: center;
+
+		@include m.tablet {
+			text-align: left;
+		}
+	}
+
+	&__texto {
+		color: v.$gris;
+	}
+}
