@@ -894,6 +894,9 @@ p {
   transition: display 0.3s ease;
 }
 @media (min-width: 768px) {
+  .formulario__input {
+    padding: 1.2rem 1rem;
+  }
   .formulario__input:hover + .formulario__span, .formulario__input:focus-visible + .formulario__span {
     display: block;
   }

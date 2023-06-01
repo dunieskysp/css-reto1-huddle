@@ -96,6 +96,8 @@
 		transition: display 0.3s ease;
 
 		@include m.tablet {
+			padding: 1.2rem 1rem;
+
 			&:hover + .formulario__span,
 			&:focus-visible + .formulario__span {
 				display: block;
