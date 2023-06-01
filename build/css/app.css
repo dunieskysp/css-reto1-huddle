@@ -893,6 +893,18 @@ p {
   outline: none;
   transition: display 0.3s ease;
 }
+.formulario__input::-webkit-input-placeholder {
+  opacity: 0;
+}
+.formulario__input:-ms-input-placeholder {
+  opacity: 0;
+}
+.formulario__input::-ms-input-placeholder {
+  opacity: 0;
+}
+.formulario__input::placeholder {
+  opacity: 0;
+}
 @media (min-width: 768px) {
   .formulario__input {
     padding: 1.2rem 1rem;
@@ -902,6 +914,18 @@ p {
   }
   .formulario__input:hover, .formulario__input:focus-visible {
     outline: 2px solid #ff7575;
+  }
+  .formulario__input:hover::-webkit-input-placeholder {
+    opacity: 1;
+  }
+  .formulario__input:hover:-ms-input-placeholder {
+    opacity: 1;
+  }
+  .formulario__input:hover::-ms-input-placeholder {
+    opacity: 1;
+  }
+  .formulario__input:hover::placeholder {
+    opacity: 1;
   }
 }
 .formulario__span {
